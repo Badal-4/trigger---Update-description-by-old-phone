@@ -1,0 +1,21 @@
+public class trgController
+{
+    public static void trgMethod(List<Account> accList,Map<Id,Account> oldMap)
+    {
+        if(accList.size() > 0)
+        {
+            for(Account newAcc : accList)
+            {
+                if(oldMap != null)
+                {
+                    Account oldAcc = oldMap.get(newAcc.Id);
+                    
+                    if(oldAcc.Phone != newAcc.Phone)
+                    {
+                        newAcc.Description = oldAcc.Phone;
+                    }
+                }
+            }
+        }
+    }
+}
